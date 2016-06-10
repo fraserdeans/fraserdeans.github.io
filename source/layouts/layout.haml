@@ -4,15 +4,13 @@
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
     %meta{:charset => "utf-8"}
     %meta{:content => "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", :name => "viewport"}
-    / Use title if it's in the page YAML frontmatter
-    %title= current_page.data.title || "Middleman"
-    %link{:href => "//fonts.googleapis.com/css?family=Lato:300,400", :rel => "stylesheet", :type => "text/css"}
-      = stylesheet_link_tag :site
-      = javascript_include_tag :all
-
-  %body{:class => page_classes}
-    .container
-      = yield
+    %meta(name="description" content="Fraser Deans is a digital product designer mostly building for the web.")
+    %title= current_page.data.title || "FraserDeans.com"
+    = stylesheet_link_tag :site
+    = javascript_include_tag :all
     %script{:src => "https://use.typekit.net/zgo5cxn.js"}
     :javascript
       try{Typekit.load({ async: true });}catch(e){}
+  %body{:class => page_classes}
+    .container
+      = yield
