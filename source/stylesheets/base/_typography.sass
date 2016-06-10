@@ -1,0 +1,61 @@
+$font-stack: "calluna", 'Helvetica', Arial, sans-serif
+$base-font-size: 1.8rem
+$vertical-rhythm: $base-font-size * 1.45 // 26.1px
+$font-scale: 1.618
+
+=vertical-rhythm-top-spacer($rows)
+  margin-top: $rows * $vertical-rhythm
+
+=vertical-rhythm-bottom-spacer($rows)
+  margin-bottom: $rows * $vertical-rhythm
+
+html
+  font-size: 62.5%
+  font-family: $font-stack
+  -webkit-font-smoothing: antialiased
+
+body
+  font-size: $base-font-size
+  line-height: $vertical-rhythm
+  color: #0163FF
+
+h1
+  font-size: $font-scale * $font-scale * $font-scale * $base-font-size
+  line-height: $vertical-rhythm * 3
+  +vertical-rhythm-top-spacer(5)
+  +vertical-rhythm-bottom-spacer(1)
+
+h2
+  font-size: $font-scale * $font-scale * $base-font-size
+  line-height: $vertical-rhythm * 2
+  +vertical-rhythm-top-spacer(2)
+  +vertical-rhythm-bottom-spacer(2)
+
+h3
+  font-size: $font-scale * $base-font-size
+  line-height: $vertical-rhythm * 1.5
+  +vertical-rhythm-top-spacer(2)
+  +vertical-rhythm-bottom-spacer(0.5)
+
+input,
+button,
+select,
+textarea
+  font-family: $font-stack
+  font-size: 1.6rem
+
+strong
+  font-weight: bold
+
+p
+  font-style: normal
+  font-weight: 400
+  margin-top: 0
+  +vertical-rhythm-bottom-spacer(0.5)
+
+
+
+a
+  background-color: yellow
+  color: #0163FF
+  text-decoration: none

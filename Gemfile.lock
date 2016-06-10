@@ -122,9 +122,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  kramdown
   middleman (>= 4.0.0)
   middleman-compass (>= 4.0.0)
   middleman-gh-pages
   middleman-livereload
   tzinfo-data
   wdm (~> 0.1.0)
+
+BUNDLED WITH
+   1.12.5
